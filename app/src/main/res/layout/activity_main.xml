@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#f8f4f8"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    tools:context=".MainActivity">
+
+
+    <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/indicator">
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/nxt_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/indicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/next_border"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/next_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/next"
+            android:textColor="#202020"
+            android:textSize="20sp"/>
+        <ImageView
+            android:id="@+id/next_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:clickable="true"
+            android:contentDescription="@string/image"
+            android:focusable="true"
+            android:padding="7dp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+    </LinearLayout>
+
+    <!-- the linear layout and the button are overlapping because
+    one of them will be removed programmatically depending on which
+    layout is on screen at the moment
+     -->
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/indicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/get_started_border"
+        android:onClick="openHome"
+        android:padding="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/start"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:background="#f8f4f8"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="openHome"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="@string/skip"/>
+
+</RelativeLayout>

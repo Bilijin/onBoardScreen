@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">OnboardScreen</string>
+    <string name="calm">Keep calm</string>
+    <string name="less_stress">Feel less stressed and more mindful with meditation</string>
+    <string name="next">Next</string>
+    <string name="skip"><u>Skip</u></string>
+    <string name="image">An image</string>
+    <string name="focus">Stay focused</string>
+    <string name="maintain_focus">Let\'s maintain your focus by meditating every day without hassle</string>
+    <string name="mindfulness">Mindfulness</string>
+    <string name="mind">The mind is very powerful tool we possess. Taking care of our mind is of utmost priority</string>
+    <string name="start">Get Started</string>
+    <string name="hi">Hello World \nWelcome to this app</string>
+</resources>
